@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de amigos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="hero is-warning">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Onde vai ser o churrasco depois da quarentena?
+                </h1>
+                <h2 class="subtitle">
+                    Por Mauricio Jr
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <br>
+        <div class="columns">
+
+            <div class="column is-half">
+                <label class="label">Adicionar novo amigo</label>
+                <div class="field has-addons">
+                    <p class="control">
+                        <input class="input is-primary" placeholder="adicionar novo amigo">
+                    </p>
+                    <p class="control">
+                        <a class="button is-primary add">add</a>
+                        <a class="button is-danger clear is-rounded">limpar</a>
+                    </p>
+
+                </div>
+                <label class="label">Lista de amigos</label>
+                <ul>
+
+                </ul>
+
+            </div>
+            <div class="column">
+                <label class="label">Sortear agora?</label>
+                <div class="field">
+                    <div class="control">
+
+                        <button class="button is-primary is-rounded sort" onclick="sorteio()">
+                            sortear
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="notification is-primary is-hidden">
+                    <button class="delete" onclick="deleteNote()"></button>
+
+                    Você deve adicionar amigos na lista!
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
