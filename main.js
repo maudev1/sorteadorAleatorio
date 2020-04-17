@@ -49,11 +49,7 @@ function sorteio() {
         let map = amigos.map((item, index) => {
             if (index == x) {
                 setTimeout(() => {
-<<<<<<< HEAD
-                    alert(item + ' ira bancar o churras!');
-=======
-                    alert(item + ' ira pagar a proxima cerveja!');
->>>>>>> master
+                    alert(item + ' ira bancar o proximo churrasco!');
                     sortButton.setAttribute('class', 'button is-primary is-rounded sort');
                 }, 1000);
 
