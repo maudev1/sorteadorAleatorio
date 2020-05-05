@@ -10,16 +10,23 @@ var friends = []
 
 //add new friend function
 const addNewFriend = $('.add').click(() => {
-    if ($('input').val() == 0)
-        alert('é preciso por um nome');
+    if ($('input').val() == 0) {
+        $('.notification').show().text('Você deve adicionar amigos na lista!');
 
-    $('ul').empty();
-    friends.push($('input').val());
-    createItemList();
+        setTimeout(() => {
+            $('.notification').fadeOut();
 
-    $('.input').val('')
-    console.log($('input').val() + ' adicionado com sucesso!')
+        }, 2000)
 
+    }
+    else {
+        $('ul').empty();
+        friends.push($('input').val());
+        createItemList();
+
+        $('.input').val('')
+        console.log($('input').val() + ' adicionado com sucesso!')
+    }
 })
 
 //create a new li element
@@ -44,7 +51,7 @@ const clearList = $('.clear').click(() => {
 const sort = () => {
 
     if (friends.length == 0) {
-        $('.notification').show();
+        $('.notification').show().text(' Você deve adicionar amigos na lista!');
 
         setTimeout(() => {
             $('.notification').fadeOut();
@@ -58,7 +65,6 @@ const sort = () => {
         var randomNumber = Math.floor((Math.random() * friends.length));
 
         console.log('Sorteando...');
-
         friends.map((friend, index) => {
             if (index == randomNumber) {
                 setTimeout(() => {
@@ -74,3 +80,8 @@ const sort = () => {
 
 }
 
+//sort button
+$('.sort').click(function () {
+    sort();
+
+})
