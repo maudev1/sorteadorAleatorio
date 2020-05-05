@@ -40,9 +40,15 @@ const clearList = $('.clear').click(() => {
 
 });
 
+<<<<<<< HEAD
 //sort function
 const sort = () => {
 
+=======
+//função para sortear
+const sort =() => {
+    
+>>>>>>> master
     if (friends.length == 0) {
         $('.notification').show();
 
@@ -58,7 +64,11 @@ const sort = () => {
         var randomNumber = Math.floor((Math.random() * friends.length));
 
         console.log('Sorteando...');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> master
         friends.map((friend, index) => {
             if (index == randomNumber) {
                 setTimeout(() => {
