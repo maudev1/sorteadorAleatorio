@@ -47,21 +47,9 @@ const clearList = $('.clear').click(() => {
 
 });
 
-<<<<<<< HEAD
 //sort function
 const sort = () => {
 
-=======
-<<<<<<< HEAD
-//sort function
-const sort = () => {
-
-=======
-//função para sortear
-const sort =() => {
-    
->>>>>>> master
->>>>>>> master
     if (friends.length == 0) {
         $('.notification').show().text(' Você deve adicionar amigos na lista!');
 
@@ -77,14 +65,6 @@ const sort =() => {
         var randomNumber = Math.floor((Math.random() * friends.length));
 
         console.log('Sorteando...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> master
->>>>>>> master
         friends.map((friend, index) => {
             if (index == randomNumber) {
                 setTimeout(() => {
