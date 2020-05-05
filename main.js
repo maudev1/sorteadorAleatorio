@@ -1,11 +1,3 @@
-let inputElemnt = document.querySelector('input');
-let addButton = document.querySelector('.add');
-let clearButton = document.querySelector('.clear');
-let listElement = document.querySelector('ul');
-let sortButton = document.querySelector('.sort');
-let deleteButton = document.querySelector('.delete');
-let noteElement = document.querySelector('.notification');
-
 //settings
 $(document).ready(()=>{
     $('.notification').hide();
@@ -38,6 +30,7 @@ const createItemList = () => {
 
     });
 };
+createItemList();
 
 //clear li element and friends array
 const clearList = $('.clear').click(() => {
@@ -48,7 +41,8 @@ const clearList = $('.clear').click(() => {
 });
 
 //função para sortear
-function sorteio() {
+const sort =() => {
+    
     if (friends.length == 0) {
         $('.notification').show();
 
@@ -58,14 +52,18 @@ function sorteio() {
         }, 2000)
 
     } else {
-        sortButton.setAttribute('class', 'button is-primary is-rounded sort is-loading');
-        var x = Math.floor((Math.random() * friends.length));
+
+        $('.sort').addClass('is-loading');
+
+        var randomNumber = Math.floor((Math.random() * friends.length));
+
         console.log('Sorteando...');
-        let map = friends.map((item, index) => {
-            if (index == x) {
+        
+        friends.map((friend, index) => {
+            if (index == randomNumber) {
                 setTimeout(() => {
-                    alert(item + ' ira bancar o proximo churrasco!');
-                    sortButton.setAttribute('class', 'button is-primary is-rounded sort');
+                    alert(friend + ' ira bancar o proximo churrasco!');
+                    $('.sort').removeClass('is-loading')
                 }, 1000);
 
             }
@@ -76,4 +74,3 @@ function sorteio() {
 
 }
 
-createItemList();
