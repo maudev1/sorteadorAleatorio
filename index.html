@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteador de amigos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sorteador de amigos</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
 
-</head>
-
-<body>
-    <section class="hero is-warning">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    Onde vai ser o churrasco depois da quarentena?
-                </h1>
-                <h2 class="subtitle">
-                    Por Mauricio Jr
-                </h2>
+    <body>
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        A onde será o próximo churrasco?
+                    </h1>
+                    <h2 class="subtitle">
+                        para descobrir informe os nomes dos amigos:
+                    </h2>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="container">
-        <br>
-        <div class="columns">
+        <div class="container">
+            <br>
+            <div class="columns">
 
-            <div class="column is-half">
-                <label class="label">Adicionar novo amigo</label>
-                <div class="field has-addons">
-                    <p class="control">
-                        <input class="input is-primary" placeholder="adicionar novo amigo">
-                    </p>
-                    <p class="control">
-                        <a class="button is-primary add">add</a>
-                        <a class="button is-danger clear is-rounded">limpar</a>
-                    </p>
+                <div class="column is-half">
+                    <label class="label">Adicionar novo amigo</label>
+                    <div class="field has-addons">
+                        <p class="control">
+                            <input class="input is-primary" placeholder="adicionar novo amigo">
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary add">add</a>
+                            <a class="button is-danger clear is-rounded">limpar</a>
+                        </p>
+
+                    </div>
+
 
                 </div>
-                <label class="label">Lista de amigos</label>
-                <ul>
+                <div class="column">
+                    <label class="label">Sortear agora?</label>
+                    <div class="field">
+                        <div class="control">
 
-                </ul>
+                            <button class="button is-primary is-rounded sort">
+                                sortear
+                            </button>
+                        </div>
+                    </div>
 
-            </div>
-            <div class="column">
-                <label class="label">Sortear agora?</label>
-                <div class="field">
-                    <div class="control">
+                </div>
 
-                        <button class="button is-primary is-rounded sort">
-                            sortear
-                        </button>
+                <div class="column">
+                    <div class="notification is-danger">
+                        <button class="delete"></button>
+
                     </div>
                 </div>
-
             </div>
 
-            <div class="column">
-                <div class="notification is-danger">
-                    <button class="delete"></button>
+            <hr>
 
+            <div class="columns">
+                <div class="column">
+                    <div class="lista">
+                        <ul>
+
+
+                        </ul>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
+        <script src="main.js"></script>
 
-    <script src="main.js"></script>
-</body>
+        <style>
+            .lista li {
+                background-color: rgb(0, 209, 178);
+                color: white;
+                font-weight: 800;
+                font-size: 24px;
+                padding: 5px;
+                margin: 2px;
+
+
+            }
+
+            hr{
+                background-color: rgba(58, 58, 58, 0.199);
+            }
+        </style>
+    </body>
 
 </html>
